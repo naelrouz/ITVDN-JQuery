@@ -1,7 +1,35 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Работа в классе</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!--Scripts-->
+    <script   src="https://code.jquery.com/jquery-1.12.3.min.js"   integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+
+            $("#selectorButton").on('click', setColor);
+
+            function setColor(){
+                var selector = $("#selectorInput").val();
+                var element = $(selector);
+
+                $('*').removeClass();
+                element.addClass("colorRed");
+
+            };
+        });
+</script>
+    <style>
+        body {
+            padding: 20px;
+        }
+        .colorRed {
+            background: #ff0026;
+        }
+    </style>
 </head>
 <body>
 
@@ -11,6 +39,47 @@
     3)	Создайте произвольное количество элементов на странице с различными уровнями вложенности.
     4)	Цель: в текстовое поле вводим селектор и нажимаем на кнопку. Элемент, который соответвует селектору, меняет цвет. 
     -->
+
+
+            <p>
+                <label for="selectorInput">Введите селектор</label>
+                <input type="text" id="selectorInput">
+                <button type="button" id="selectorButton">Применить</button>
+            </p>
+
+
+
+            <div>div
+                <p>pppppp
+                    <span>span</span>
+                </p>
+            </div>
+
+            <div>div
+                <ul>
+                    <li>Пункт 1</li>
+                    <li>Пункт 2</li>
+                    <li>Пункт 3</li>
+                    <li>Пункт 4</li>
+                    <li>Пункт 5</li>
+                </ul>
+            </div>
+
+
+            <div>div
+                <ol>
+                    <li>Пункт 1</li>
+                    <li>Пункт 2</li>
+                    <li>Пункт 3</li>
+                    <li>Пункт 4</li>
+                    <li>Пункт 5</li>
+                </ol>
+            </div>
+
+
+
+
+
 
 </body>
 </html>

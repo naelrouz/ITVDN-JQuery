@@ -3,11 +3,38 @@
     <head>
         <title>Домашняя работа</title>
         <link href="style.css" rel="stylesheet" />
+        <script   src="https://code.jquery.com/jquery-1.12.3.min.js"   integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   crossorigin="anonymous"></script>
         <script>
+            $(document).ready(function(){
 
-            // Тут будет Ваш код
 
+
+
+                $("#q1").on('click', function(){
+
+                    $('.red,ul').css('color','red');
+                });
+
+                $("#q2").on('click', function(){
+
+                    $('div > p').css('color','#3B5FFF');
+                });
+
+                $("#q3").on('click', function(){
+
+                    //$('img ~ strong ').css('color','#3B5FFF');
+                    $('img ~ strong').css('fontStyle', 'italic');
+                });
+
+
+            });
         </script>
+        <style>
+
+            .colorRed {
+                background: #ff0026;
+            }
+        </style>
     </head>
     <body>
         <header id="main">
@@ -16,10 +43,10 @@
         <section>
             <nav>
                 <h2>Page settings</h2>
-                <input id="#" type="button" value="Задание 1" /><br />
-                <input id="#" type="button" value="Задание 2" /><br />
-                <input id="#" type="button" value="Задание 3" /><br />
-                <input id="#" type="button" value="Задание 4" /><br />
+                <input id="q1" type="button" value="Задание 1" /><br />
+                <input id="q2" type="button" value="Задание 2" /><br />
+                <input id="q3" type="button" value="Задание 3" /><br />
+                <input id="q4" type="button" value="Задание 4" /><br />
             </nav>
             <article> 
                 <header>
