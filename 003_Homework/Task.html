@@ -22,8 +22,8 @@
 
                 $("#q3").on('click', function(){
 
-                    //$('img ~ strong ').css('color','#3B5FFF');
-                    $('img ~ strong').css('fontStyle', 'italic');
+                    $('img + span').addClass('q3');
+                    //$('img~strong').css('fontStyle', 'italic');
                 });
 
 
@@ -31,8 +31,8 @@
         </script>
         <style>
 
-            .colorRed {
-                background: #ff0026;
+            .q3 {
+                font-style: italic;
             }
         </style>
     </head>
